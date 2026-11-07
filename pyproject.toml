@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kindle-clippings-tidy"
+version = "0.1.0"
+description = "Turn Kindle's My Clippings.txt into tidy Markdown files: one per book, deduped, tagged, indexed — plus optional local-LLM themes."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Asdale Dynamics, LLC" }]
+keywords = ["kindle", "clippings", "highlights", "markdown", "ollama", "local-ai"]
+classifiers = [
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Utilities",
+]
+
+[project.scripts]
+kindle-tidy = "kindle_clippings_tidy.cli:main"
+
+[tool.ruff]
+line-length = 100
